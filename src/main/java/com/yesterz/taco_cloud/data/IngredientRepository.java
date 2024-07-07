@@ -1,15 +1,6 @@
 package com.yesterz.taco_cloud.data;
 
-import java.util.Optional;
-
 import com.yesterz.taco_cloud.Ingredient;
+import org.springframework.data.repository.CrudRepository;
 
-public interface IngredientRepository {
-
-    Iterable<Ingredient> findAll();
-
-    Optional<Ingredient> findById(String id);
-
-    Ingredient save(Ingredient ingredient);
-
-}
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {}
