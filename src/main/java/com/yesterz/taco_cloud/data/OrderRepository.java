@@ -4,9 +4,10 @@ import com.yesterz.taco_cloud.TacoOrder;
 
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.data.repository.CrudRepository;
 
-public interface OrderRepository extends CrudRepository<TacoOrder, Long> {
+public interface OrderRepository extends JpaRepository<TacoOrder, Long> {
   // TacoOrder save(TacoOrder order); // abstract method
   List<TacoOrder> findByDeliveryZip(String deliveryZip);
 }

@@ -1,13 +1,16 @@
-package com.yesterz.taco_cloud;
+package com.yesterz.taco_cloud.web;
 
+import com.yesterz.taco_cloud.Ingredient;
 import com.yesterz.taco_cloud.Ingredient.Type;
+import com.yesterz.taco_cloud.Taco;
+import com.yesterz.taco_cloud.TacoOrder;
 import com.yesterz.taco_cloud.data.IngredientRepository;
 import jakarta.validation.Valid;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -25,6 +28,7 @@ public class DesignTacoController {
 
   private final IngredientRepository ingredientRepo;
 
+  @Autowired
   public DesignTacoController(IngredientRepository ingredientRepo) {
     this.ingredientRepo = ingredientRepo;
   }
