@@ -1,8 +1,10 @@
 package com.yesterz.taco_cloud;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
@@ -13,11 +15,10 @@ import java.util.Date;
 import java.util.List;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
 @Data
-@Table // @Table("Taco_Cloud_Order")
+// @Table // @Table("Taco_Cloud_Order")
+@Entity
 public class TacoOrder implements Serializable {
 
   private static final long serialVersionUID = 1L;
